@@ -1,0 +1,56 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+@use "../foundation/breakpoints" as *;
+@use "../common/parts" as *;
+
+/* ================================
+   Sidebar
+   sidebarがない案件はhtmlの'<aside class="sidebar">'をコメントアウトする。
+   page.scss(style.scss)の.main-bodyのflex-directionを変更することで
+   レイアウトを変えることができます。
+
+   注意）
+   sidebarの内容が多すぎる場合、親の高さ(main.bodyのmin-height:100vh)を
+   超えてしまうため、position:sticky;が効かなくなります。
+   また、sidebarの祖先にoverflow:hidden;は禁止。
+   ================================ */
+.sidebar {
+  display: none;
+
+  @include mq(md) {
+    .sidebar__bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      // background-color: #a4ceea;
+      // background: url("../img/polygon_up.png") no-repeat center center / contain;
+    }
+
+    display: block;
+    width: $sidebar-width;
+    border-right: 1px solid #eee;
+    padding: $space-xl $space-md;
+    position: sticky;
+    top: $header-height-pc; // sidebarの始まりの位置はtopで調整
+    height: fit-content; //中身の量によって伸びる
+  }
+}
+
+/* ================================
+   Sidebar詳細
+   ================================ */
+.sidebar-section {
+  margin-bottom: $space-2xl;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: $font-weight-bold;
+  margin-bottom: $space-sm;
+}
+
+.sidebar-text {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+}

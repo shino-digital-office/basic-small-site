@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/* ----------------------------------------
+  Reset
+  - ブラウザ差異の吸収
+  - 依存関係は持たせない
+---------------------------------------- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ================================
+  　フォントの設定方法
+    step1:サイトで使うフォントをすべて洗い出し、Google Fontsにアクセスして"Get font"
+    step2:"Get font"したhtmlのコードをheadに貼る
+    step3:"Get font"したcssのコードを_variables.scss(このファイル)に貼り、変数名を付ける
+    step4:デフォルト以外のフォントを使いたい場面では定義した変数名を呼び出す
+   ================================ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 64px;
+}
+
+/* 共通リセット（最小限） */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 共通決めごと */
+body {
+  font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.section {
+  position: relative;
+  padding-bottom: 100px;
+}
+
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.inner {
+  padding: 0 20px;
+  /* 最後に来たテキスト要素だけ margin-bottom を殺す */
+}
+.inner > :last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .inner {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+.inner--flex {
+  padding: 0 20px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+}
+.inner--flex > h1,
+.inner--flex > h2,
+.inner--flex > h3,
+.inner--flex > h4,
+.inner--flex > h5,
+.inner--flex > h6,
+.inner--flex > p,
+.inner--flex > ul,
+.inner--flex > ol,
+.inner--flex > dl {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .inner--flex {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+.flex-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+}
+.flex-layout > h1,
+.flex-layout > h2,
+.flex-layout > h3,
+.flex-layout > h4,
+.flex-layout > h5,
+.flex-layout > h6,
+.flex-layout > p,
+.flex-layout > ul,
+.flex-layout > ol,
+.flex-layout > dl {
+  margin-bottom: 0;
+}
+
+.flex-layout--row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 16px;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+}
+.flex-layout--row > h1,
+.flex-layout--row > h2,
+.flex-layout--row > h3,
+.flex-layout--row > h4,
+.flex-layout--row > h5,
+.flex-layout--row > h6,
+.flex-layout--row > p,
+.flex-layout--row > ul,
+.flex-layout--row > ol,
+.flex-layout--row > dl {
+  margin-bottom: 0;
+}
+
+.flex-layout--column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+}
+.flex-layout--column > h1,
+.flex-layout--column > h2,
+.flex-layout--column > h3,
+.flex-layout--column > h4,
+.flex-layout--column > h5,
+.flex-layout--column > h6,
+.flex-layout--column > p,
+.flex-layout--column > ul,
+.flex-layout--column > ol,
+.flex-layout--column > dl {
+  margin-bottom: 0;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 768px) {
+  .sp-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc-only {
+    display: none;
+  }
+}

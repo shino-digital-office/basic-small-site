@@ -1,0 +1,112 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+@use "../foundation/breakpoints" as *;
+@use "../common/parts" as *;
+
+/* ================================
+   footer
+   ================================ */
+.site-footer {
+  margin: 0 auto;
+  // max-width: $layout-max-width; //紙面型の場合はここを有効にする
+  text-align: center;
+  position: relative;
+
+  .footer__bg {
+    // 背景専用レイヤー
+    position: absolute;
+    inset: 0; //を基本とする
+    background: #a4ceea;
+    z-index: -1;
+  }
+
+  .inner--footer {
+    padding-block: 20px;
+  }
+
+  &__main {
+    margin-bottom: 60px; // 下部余白（固定フッター分）
+  }
+}
+
+.footer-nav {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: row;
+    gap: $space-md;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .nav-links {
+    }
+
+    .button {
+      @include mq(md) {
+        @include button-size(middle);
+      }
+    }
+
+    .nav-link {
+      border: none;
+      width: 100%;
+      padding: 0;
+
+      &__main {
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      &__deco svg {
+        display: none;
+      }
+
+      //nav-linkホバー時のアニメーション
+      &:hover {
+        opacity: 0.8;
+        color: #1391e6;
+      }
+    }
+  }
+}
+
+/* ===============================
+  固定フッター
+================================ */
+.site-footer__fixed {
+  position: fixed;
+  width: 100%;
+  // max-width: $layout-max-width; //紙面型の場合はここを有効にする
+  height: 60px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: $z-footer-fixed;
+
+  .footer-fixed__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: #7fbce5;
+  }
+  .inner--flex {
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+// md以上では固定フッターを非表示
+
+@include mq(md) {
+  .site-footer__main {
+    margin-bottom: 0;
+  }
+
+  .site-footer__fixed {
+    display: none;
+  }
+}

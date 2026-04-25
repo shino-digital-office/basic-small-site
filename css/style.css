@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* ================================
+  　フォントの設定方法
+    step1:サイトで使うフォントをすべて洗い出し、Google Fontsにアクセスして"Get font"
+    step2:"Get font"したhtmlのコードをheadに貼る
+    step3:"Get font"したcssのコードを_variables.scss(このファイル)に貼り、変数名を付ける
+    step4:デフォルト以外のフォントを使いたい場面では定義した変数名を呼び出す
+   ================================ */
+.base__bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ================================
+   Desktop Navigation
+   ================================ */
+/* ================================
+   Main Layout
+   ================================ */
+.main-layout {
+  position: relative;
+  overflow-x: clip;
+}
+
+/* ================================
+   Main Visual / fv
+   ================================ */
+.main-hero {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ================================
+   Main Body Layout
+   ================================ */
+.main-body {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .main-body {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    min-height: 100vh;
+  }
+}
+
+.main-body__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* ================================
+   Sidebar
+   ================================ */
+/* ================================
+   Main Content Column
+   ================================ */
+.main-content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+}
+
+/* 紙面型では中央寄せしない */
+.main-content .container {
+  max-width: none;
+  margin: 0;
+}
+
+/* =====================================
+   Section上書き
+
+===================================== */
+/* ================================
+   footer
+   ================================ */
+/* =====================================
+    トップに戻るボタン
+
+===================================== */

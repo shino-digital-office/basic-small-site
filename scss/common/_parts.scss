@@ -1,0 +1,153 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+@use "../foundation/breakpoints" as *;
+
+// ==================================================
+// Nav(中身はnav-linksとbutton)
+// ==================================================
+
+.nav {
+  //drawer-nav(デフォルトはflex--column)
+
+  //desktop-nav(デフォルトはflex--row。spは非表示)
+
+  //footer-nav(デフォルトはflex--row)
+}
+
+.nav-links {
+}
+
+.nav-link {
+  //リンク1個基本形
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 255px;
+  padding: 15px 0;
+
+  font-family: "Rounded Mplus 1c";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+
+  //仕切り用のライン。不要なら上書きで消す
+  border-top: 1px dashed black;
+  &:last-child {
+    border-bottom: 1px dashed black;
+  }
+
+  &__main {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  &__icon svg,
+  &__deco svg {
+    display: block;
+  }
+
+  &__icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__deco svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  //nav-linkホバー時のアニメーション
+  &:hover {
+    // opacity: 0.8;
+    // color: #1391e6;
+    text-decoration: none;
+  }
+}
+
+// ==================================================
+// Button
+// ==================================================
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+
+  border-radius: 40px;
+  background: #fff;
+  color: #555;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+
+  border-style: solid;
+  border-color: #555;
+  box-shadow: 0 4px 0 0 #555;
+
+  &:hover {
+    background: #1391e6;
+    text-decoration: none;
+  }
+}
+
+@mixin button-size($size) {
+  @if $size == small {
+    padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+    font-size: 14px;
+    border-width: 2px;
+  } @else if $size == middle {
+    padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+    font-size: 16px;
+    border-width: 2px;
+
+    font-feature-settings: "pref" on;
+  } @else if $size == large {
+    padding: calc(10px - 3px) calc(40px - 3px) calc(12px - 3px);
+    font-size: 20px;
+    border-width: 3px;
+  }
+}
+
+//ボタン書き方見本
+// @include mq(md) {
+//         @include button-size(small);
+//       }
+// @include mq(md) {
+//         @include button-size(middle);
+//       }
+// @include mq(md) {
+//         @include button-size(large);
+//       }
+
+/* =====================================
+    トップに戻るボタン
+
+===================================== */
+
+.pagetop {
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  z-index: $z-footer-fixed + 1; // 固定フッターより上に表示。デザインによって変更可。
+  width: 52px;
+  height: 52px;
+  img {
+    width: 100%;
+  }
+  opacity: 1;
+  visibility: hidden;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  @include mq(md) {
+    right: 20px;
+    bottom: 100px;
+  }
+}

@@ -1,0 +1,104 @@
+@use "../foundation/variables" as *;
+@use "../foundation/mixin" as *;
+@use "../foundation/breakpoints" as *;
+@use "../common/parts" as *;
+
+/* ================================
+   Header Layout
+   ================================ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: $z-header;
+
+  margin: 0 auto;
+  // max-width: $layout-max-width; // 紙面型の場合に有効化
+  color: $color-white;
+
+  /* Header Background Layer */
+  .header__bg {
+    position: absolute;
+    inset: 0;
+    background: #cac6c6;
+    z-index: -1;
+  }
+}
+/* ================================
+   Header Bar
+   ================================ */
+
+.header-bar.inner--flex {
+  align-items: center;
+  justify-content: space-between;
+  gap: $space-xs;
+  padding-block: $space-sm;
+}
+
+/* ================================
+   Brand
+   ================================ */
+
+.header-bar .brand {
+  width: 100%;
+  max-width: 270px;
+  font-weight: $font-weight-bold;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ================================
+   Desktop navigation
+   ================================ */
+//Nav基本形は_parts.scssで記述済み
+//上書きが必要だったら、以下で行えます。
+//drawer-navが固まってからDesktop navを上書きするのが順序としておすすめです
+
+.desktop-nav {
+  display: none;
+
+  @include mq(md) {
+    display: flex;
+    flex-direction: row;
+    gap: $space-md;
+    align-items: center;
+    gap: 40px;
+
+    .nav-links {
+    }
+
+    .button {
+      @include mq(md) {
+        @include button-size(middle);
+      }
+    }
+    .nav-link {
+      border: none;
+      width: 100%;
+      padding: 0;
+
+      &__main {
+        flex-direction: row;
+        gap: 8px;
+      }
+
+      &__deco svg {
+        display: none;
+      }
+
+      //nav-linkホバー時のアニメーション
+      &:hover {
+        opacity: 0.8;
+        color: #1391e6;
+      }
+    }
+  }
+}
+
+/* ================================
+   ハンバーガーメニュー(drawer-icon__bar)
+   ================================ */
+//    _drawer.scssに記述してあります。

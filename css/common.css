@@ -1,0 +1,669 @@
+@charset "UTF-8";
+/* ================================
+  　フォントの設定方法
+    step1:サイトで使うフォントをすべて洗い出し、Google Fontsにアクセスして"Get font"
+    step2:"Get font"したhtmlのコードをheadに貼る
+    step3:"Get font"したcssのコードを_variables.scss(このファイル)に貼り、変数名を付ける
+    step4:デフォルト以外のフォントを使いたい場面では定義した変数名を呼び出す
+   ================================ */
+.nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 255px;
+  padding: 15px 0;
+  font-family: "Rounded Mplus 1c";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  border-top: 1px dashed black;
+}
+.nav-link:last-child {
+  border-bottom: 1px dashed black;
+}
+.nav-link__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+}
+.nav-link__icon svg, .nav-link__deco svg {
+  display: block;
+}
+.nav-link__icon svg {
+  width: 24px;
+  height: 24px;
+}
+.nav-link__deco svg {
+  width: 14px;
+  height: 14px;
+}
+.nav-link:hover {
+  text-decoration: none;
+}
+
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 40px;
+  background: #fff;
+  color: #555;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+  line-height: 1.6;
+  border-style: solid;
+  border-color: #555;
+  -webkit-box-shadow: 0 4px 0 0 #555;
+          box-shadow: 0 4px 0 0 #555;
+}
+.button:hover {
+  background: #1391e6;
+  text-decoration: none;
+}
+
+/* =====================================
+    トップに戻るボタン
+
+===================================== */
+.pagetop {
+  position: fixed;
+  right: 10px;
+  bottom: 40px;
+  z-index: 51;
+  width: 52px;
+  height: 52px;
+  opacity: 1;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s, visibility 0.3s;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.pagetop img {
+  width: 100%;
+}
+.pagetop.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .pagetop {
+    right: 20px;
+    bottom: 100px;
+  }
+}
+
+/* ----------------------
+   fvのimgをbgとして使う型
+   ---------------------- */
+.fv {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+}
+
+.fv__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.fv__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.fv__frame {
+  position: absolute;
+  inset: 0 20px;
+  display: grid;
+  place-items: center;
+}
+
+/* コンテナを親要素内に自在に配置 */
+.fv__container {
+  position: relative;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  max-width: 760px;
+  background: rgba(0, 0, 0, 0.55);
+  color: #aaffcc;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+/* ================================
+   Header Layout
+   ================================ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  margin: 0 auto;
+  color: #fff;
+  /* Header Background Layer */
+}
+.site-header .header__bg {
+  position: absolute;
+  inset: 0;
+  background: #cac6c6;
+  z-index: -1;
+}
+
+/* ================================
+   Header Bar
+   ================================ */
+.header-bar.inner--flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 8px;
+  padding-block: 12px;
+}
+
+/* ================================
+   Brand
+   ================================ */
+.header-bar .brand {
+  width: 100%;
+  max-width: 270px;
+  font-weight: 700;
+}
+.header-bar .brand img {
+  width: 100%;
+  height: auto;
+}
+
+/* ================================
+   Desktop navigation
+   ================================ */
+.desktop-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .desktop-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 16px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .desktop-nav .button {
+    padding: 4px 22px 6px;
+    font-size: 16px;
+    border-width: 2px;
+    -webkit-font-feature-settings: "pref" on;
+            font-feature-settings: "pref" on;
+  }
+}
+@media screen and (min-width: 768px) {
+  .desktop-nav .nav-link {
+    border: none;
+    width: 100%;
+    padding: 0;
+  }
+  .desktop-nav .nav-link__main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 8px;
+  }
+  .desktop-nav .nav-link__deco svg {
+    display: none;
+  }
+  .desktop-nav .nav-link:hover {
+    opacity: 0.8;
+    color: #1391e6;
+  }
+}
+
+/* ================================
+   ハンバーガーメニュー(drawer-icon__bar)
+   ================================ */
+/* ================================
+   Sidebar
+   sidebarがない案件はhtmlの'<aside class="sidebar">'をコメントアウトする。
+   page.scss(style.scss)の.main-bodyのflex-directionを変更することで
+   レイアウトを変えることができます。
+
+   注意）
+   sidebarの内容が多すぎる場合、親の高さ(main.bodyのmin-height:100vh)を
+   超えてしまうため、position:sticky;が効かなくなります。
+   また、sidebarの祖先にoverflow:hidden;は禁止。
+   ================================ */
+.sidebar {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .sidebar {
+    display: block;
+    width: 240px;
+    border-right: 1px solid #eee;
+    padding: 32px 16px;
+    position: sticky;
+    top: 40px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .sidebar .sidebar__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+  }
+}
+
+/* ================================
+   Sidebar詳細
+   ================================ */
+.sidebar-section {
+  margin-bottom: 48px;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sidebar-text {
+  font-size: 12px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* ================================
+   footer
+   ================================ */
+.site-footer {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.site-footer .footer__bg {
+  position: absolute;
+  inset: 0;
+  background: #a4ceea;
+  z-index: -1;
+}
+.site-footer .inner--footer {
+  padding-block: 20px;
+}
+.site-footer__main {
+  margin-bottom: 60px;
+}
+
+.footer-nav {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 16px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .footer-nav .button {
+    padding: 4px 22px 6px;
+    font-size: 16px;
+    border-width: 2px;
+    -webkit-font-feature-settings: "pref" on;
+            font-feature-settings: "pref" on;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-nav .nav-link {
+    border: none;
+    width: 100%;
+    padding: 0;
+  }
+  .footer-nav .nav-link__main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 8px;
+  }
+  .footer-nav .nav-link__deco svg {
+    display: none;
+  }
+  .footer-nav .nav-link:hover {
+    opacity: 0.8;
+    color: #1391e6;
+  }
+}
+
+/* ===============================
+  固定フッター
+================================ */
+.site-footer__fixed {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 50;
+}
+.site-footer__fixed .footer-fixed__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: #7fbce5;
+}
+.site-footer__fixed .inner--flex {
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .site-footer__main {
+    margin-bottom: 0;
+  }
+  .site-footer__fixed {
+    display: none;
+  }
+}
+/* ================================
+   説明：spのドロワーの設定方法
+   step1 _variables.scssで$drawer-widthを設定する。
+   step2 ドロワーのタイプ(A or B)によってstep-(A)または(B)を選定する。
+   Step3 選定した方のドロワーの中身を編集する。(クラス名が別々なので選定していない方は無視でOK)
+   Step4 オーバーレイの確認(通常は特に何もすることなし)
+   ================================ */
+/* ================================
+   step2-(A)
+   in-header:ヘッダーに属するドロワー
+
+   ================================ */
+.drawer-icon--in-header {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.drawer-icon--in-header .drawer-icon__bar {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
+  background: black;
+  -webkit-transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear, -webkit-transform 0.3s linear;
+}
+.drawer-icon--in-header .drawer-icon__bar:nth-of-type(1) {
+  top: 2px;
+}
+.drawer-icon--in-header .drawer-icon__bar:nth-of-type(2) {
+  top: 15px;
+}
+.drawer-icon--in-header .drawer-icon__bar:nth-of-type(3) {
+  top: 28px;
+}
+.drawer-icon--in-header.is-checked .drawer-icon__bar:nth-of-type(1) {
+  top: 15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.drawer-icon--in-header.is-checked .drawer-icon__bar:nth-of-type(2) {
+  display: none;
+}
+.drawer-icon--in-header.is-checked .drawer-icon__bar:nth-of-type(3) {
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+@media screen and (min-width: 768px) {
+  .drawer-icon--in-header {
+    display: none;
+  }
+}
+
+.drawer-content--in-header {
+  position: fixed;
+  top: 56px;
+  right: 0;
+  width: 80%;
+  height: calc(100% - 56px);
+  background-color: #0060a0;
+  text-align: center;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.drawer-content--in-header.is-checked {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/* ================================
+   step2-(B)
+   out-of-header:ヘッダーに属さない
+   （独立した）ドロワー
+   ================================ */
+.drawer-icon--out-of-header {
+  position: relative;
+  width: 32px;
+  height: 32px;
+}
+.drawer-icon--out-of-header .drawer-icon__bar {
+  position: absolute;
+  left: 0;
+  width: 32px;
+  height: 3px;
+  border-radius: 3px;
+  background: black;
+  -webkit-transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: top 0.3s linear, -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear;
+  transition: transform 0.3s linear, top 0.3s linear, -webkit-transform 0.3s linear;
+}
+.drawer-icon--out-of-header .drawer-icon__bar:nth-of-type(1) {
+  top: 2px;
+}
+.drawer-icon--out-of-header .drawer-icon__bar:nth-of-type(2) {
+  top: 15px;
+}
+.drawer-icon--out-of-header .drawer-icon__bar:nth-of-type(3) {
+  top: 28px;
+}
+.drawer-icon--out-of-header.is-checked {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .drawer-icon--out-of-header {
+    display: none;
+  }
+}
+
+.drawer-content--out-of-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 62;
+  width: 80%;
+  height: 100%;
+  background-color: #0060a0;
+  text-align: left;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, -webkit-transform 0.3s linear;
+}
+.drawer-content--out-of-header.is-checked {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+.drawer-content--out-of-header.is-checked .drawer-icon--out-of-header {
+  margin-left: -32px;
+}
+.drawer-content--out-of-header.is-checked .drawer-icon--out-of-header .drawer-icon__bar:nth-of-type(1) {
+  top: 15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.drawer-content--out-of-header.is-checked .drawer-icon--out-of-header .drawer-icon__bar:nth-of-type(2) {
+  display: none;
+}
+.drawer-content--out-of-header.is-checked .drawer-icon--out-of-header .drawer-icon__bar:nth-of-type(3) {
+  top: 15px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+/* ================================
+   Step3 
+   Drawer Navigation (Mobile)
+   ================================ */
+.drawer-nav {
+  height: 100%;
+  padding-bottom: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.drawer-nav .button {
+  padding: 4px 22px 6px;
+  font-size: 16px;
+  border-width: 2px;
+  -webkit-font-feature-settings: "pref" on;
+          font-feature-settings: "pref" on;
+}
+.drawer-nav .nav-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 255px;
+  padding: 15px 0;
+  font-family: "Rounded Mplus 1c";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+  border-top: 1px dashed #fff;
+}
+.drawer-nav .nav-link:last-child {
+  border-bottom: 1px dashed #fff;
+}
+.drawer-nav .nav-link__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 14px;
+}
+.drawer-nav .nav-link__icon svg, .drawer-nav .nav-link__deco svg {
+  display: block;
+}
+.drawer-nav .nav-link__icon svg {
+  width: 24px;
+  height: 24px;
+}
+.drawer-nav .nav-link__deco svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ================================
+   Step4 
+   Drawer Overlay
+   ================================ */
+/*
+  - HTMLの構造としてはheader の外に配置
+  - header / footer より上または下(z-index調整)
+  - drawer-content より下
+*/
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
+}
+.drawer-overlay--in-header {
+  z-index: 59;
+}
+.drawer-overlay--out-of-header {
+  z-index: 61;
+}
+.drawer-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}

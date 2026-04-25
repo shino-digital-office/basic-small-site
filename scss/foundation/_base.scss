@@ -1,0 +1,187 @@
+// ======================================================
+// _base.scss
+// 母艦基盤用 SCSS
+//
+// ・body, typography, layout, background layer の基本スタイルを定義
+//
+// ここに書くものは母艦全ページ共通の「土台」として扱う
+// ======================================================
+
+@use "variables";
+@use "mixin";
+@use "breakpoints";
+
+html {
+  scroll-behavior: smooth; // ページ内リンクのスクロールをスムーズに
+  scroll-padding-top: 64px; //ヘッダー分の高さを考慮してスクロール
+}
+
+/* 共通リセット（最小限） */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 共通決めごと */
+body {
+  font-family: variables.$font-family-main; //デフォルト
+
+  line-height: 1.6;
+  background-color: #fff;
+  color: #333;
+}
+h1 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 28px;
+  margin-bottom: 14px;
+}
+
+h3 {
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+p {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.section {
+  position: relative; // 背景レイヤー用の基準
+  // overflow: hidden;
+  // padding-top: 100px;//上下方向の間隔は基本的にはpadding-bottomで取る。(各セクションでの上書きは自由)
+  padding-bottom: 100px;
+}
+.bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.inner {
+  padding: 0 variables.$space-lg;
+
+  /* 最後に来たテキスト要素だけ margin-bottom を殺す */
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoints.mq(md) {
+    max-width: calc(variables.$layout-max-width + variables.$space-lg * 2);
+    margin: 0 auto;
+  }
+}
+.inner--flex {
+  padding: 0 variables.$space-lg;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul,
+  > ol,
+  > dl {
+    margin-bottom: 0;
+  }
+  @include breakpoints.mq(md) {
+    max-width: calc(variables.$layout-max-width + variables.$space-lg * 2);
+    margin: 0 auto;
+  }
+}
+.flex-layout {
+  display: flex;
+  gap: 16px;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul,
+  > ol,
+  > dl {
+    margin-bottom: 0;
+  }
+}
+
+//fle-layoutを明示的に横並びにしたクラス
+.flex-layout--row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul,
+  > ol,
+  > dl {
+    margin-bottom: 0;
+  }
+}
+
+//fle-layoutを明示的に縦並びにしたクラス
+.flex-layout--column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* 直下に来たテキスト要素だけ margin-bottom を殺す */
+  > h1,
+  > h2,
+  > h3,
+  > h4,
+  > h5,
+  > h6,
+  > p,
+  > ul,
+  > ol,
+  > dl {
+    margin-bottom: 0;
+  }
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.sp-only {
+  @include breakpoints.mq(md) {
+    display: none;
+  }
+}
+
+.pc-only {
+  @include breakpoints.mq(sp) {
+    display: none;
+  }
+}
