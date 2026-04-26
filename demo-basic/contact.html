@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | BASIC VIDEO WORKS</title>
+
+    <link
+      rel="icon"
+      href="../assets/images/favicon-basic.png"
+      type="image/png"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/foundation.css" />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/contact.css" />
+    <link rel="stylesheet" href="../css/theme-basic.css" />
+  </head>
+
+  <body class="theme-basic">
+    <div class="base__bg"></div>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <div class="header__bg"></div>
+
+      <div class="header-bar inner--flex">
+        <a class="brand" href="work.html">BASIC VIDEO WORKS</a>
+
+        <!-- PCナビ -->
+        <nav class="desktop-nav">
+          <div class="nav-links flex-layout--row">
+            <a href="work.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">Works</span>
+              </span>
+            </a>
+
+            <a href="about.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">About</span>
+              </span>
+            </a>
+
+            <a href="service.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">Service</span>
+              </span>
+            </a>
+
+            <a href="contact.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">Contact</span>
+              </span>
+            </a>
+          </div>
+        </nav>
+
+        <!-- ドロワー開閉ボタン -->
+        <button
+          id="js-drawer-icon"
+          class="drawer-icon--in-header"
+          aria-label="メニューを開閉する"
+        >
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+      </div>
+
+      <!-- ドロワー -->
+      <div id="js-drawer-content" class="drawer-content--in-header">
+        <nav class="drawer-nav inner--flex">
+          <div class="nav-links">
+            <a href="work.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">Works</span>
+              </span>
+            </a>
+
+            <a href="about.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">About</span>
+              </span>
+            </a>
+
+            <a href="service.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">Service</span>
+              </span>
+            </a>
+
+            <a href="contact.html" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__text">Contact</span>
+              </span>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div
+      class="drawer-overlay drawer-overlay--in-header"
+      id="js-drawer-overlay"
+    ></div>
+
+    <!-- main -->
+    <main class="main-layout page-contact">
+      <!-- FV -->
+      <div class="main-hero">
+        <div class="main-hero__bg"></div>
+
+        <section id="fv-basic" class="fv">
+          <div class="fv__bg">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="../assets/images/fv-basic-pc.jpg"
+              />
+              <img src="../assets/images/fv-basic-sp.jpg" alt="" />
+            </picture>
+          </div>
+
+          <div class="fv__frame">
+            <div class="fv__container">
+              <h1>お問い合わせ</h1>
+              <p class="fv__caption">
+                制作のご相談・ご質問はこちらからお送りください。
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 本文 -->
+      <div class="main-body">
+        <div class="main-body__bg"></div>
+
+        <div class="main-content">
+          <!-- Contact -->
+
+          <!-- Before Contact -->
+          <section class="section section--first contact-before">
+            <div class="inner">
+              <p class="section-label">BEFORE CONTACT</p>
+              <h2 class="section-title">ご相談時に教えてほしいこと</h2>
+              <p class="section-text">
+                まだ内容がはっきり決まっていなくても大丈夫です。<br />
+                わかる範囲で、以下のような内容をお知らせください。
+              </p>
+
+              <div class="point-list">
+                <div class="point-card">
+                  <span class="point-card__number">01</span>
+                  <h3 class="point-card__title">制作したい内容</h3>
+                  <p class="point-card__text">
+                    企業紹介、店舗紹介、イベント記録、インタビューなど、
+                    作りたいもののイメージをお聞かせください。
+                  </p>
+                </div>
+
+                <div class="point-card">
+                  <span class="point-card__number">02</span>
+                  <h3 class="point-card__title">使用したい場所</h3>
+                  <p class="point-card__text">
+                    Webサイト、SNS、営業資料、店頭モニターなど、
+                    映像を使いたい場所があればお知らせください。
+                  </p>
+                </div>
+
+                <div class="point-card">
+                  <span class="point-card__number">03</span>
+                  <h3 class="point-card__title">希望時期</h3>
+                  <p class="point-card__text">
+                    撮影したい時期や、公開・納品の希望時期があれば、
+                    わかる範囲でお知らせください。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact Form -->
+          <section class="section section--bg contact-form-section">
+            <div class="inner">
+              <p class="section-label">CONTACT FORM</p>
+              <h2 class="section-title">お問い合わせフォーム</h2>
+              <p class="section-text contact-form-section__lead">
+                このデモサイトでは、フォームの見本を掲載しています。<br />
+                実際のサイトでは、GoogleフォームやWordPressのフォーム機能などに差し替えて使用できます。
+              </p>
+
+              <form class="contact-form" action="#" method="post">
+                <div class="contact-form__item">
+                  <label for="name">お名前</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="山田 太郎"
+                  />
+                </div>
+
+                <div class="contact-form__item">
+                  <label for="email">メールアドレス</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="sample@example.com"
+                  />
+                </div>
+
+                <div class="contact-form__item">
+                  <label for="category">ご相談内容</label>
+                  <select id="category" name="category">
+                    <option value="">選択してください</option>
+                    <option value="movie">映像制作について</option>
+                    <option value="interview">インタビュー動画について</option>
+                    <option value="event">イベント撮影について</option>
+                    <option value="other">その他のご相談</option>
+                  </select>
+                </div>
+
+                <div class="contact-form__item">
+                  <label for="message">お問い合わせ内容</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="7"
+                    placeholder="ご相談内容をご記入ください。まだ内容が決まっていない場合も、わかる範囲で大丈夫です。"
+                  ></textarea>
+                </div>
+
+                <div class="contact-form__button">
+                  <button type="submit">送信する</button>
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <!-- Message -->
+          <section class="section message-section">
+            <div class="inner">
+              <p class="section-label">MESSAGE</p>
+              <h2 class="section-title">
+                はじめての映像制作でもご相談ください
+              </h2>
+              <p class="section-text">
+                「何を撮ればいいかわからない」という段階からでも大丈夫です。<br />
+                目的や使い道を一緒に整理しながら、無理のない形で進めていきます。
+              </p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター -->
+    <footer class="site-footer">
+      <div class="footer__bg"></div>
+
+      <div class="site-footer__main">
+        <div class="inner inner--footer">
+          <nav class="nav footer-nav flex-layout--row">
+            <div class="nav-links flex-layout--row">
+              <a href="work.html" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__text">Works</span>
+                </span>
+              </a>
+
+              <a href="about.html" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__text">About</span>
+                </span>
+              </a>
+
+              <a href="service.html" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__text">Service</span>
+                </span>
+              </a>
+
+              <a href="contact.html" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__text">Contact</span>
+                </span>
+              </a>
+            </div>
+          </nav>
+
+          <div class="footer-meta">
+            <small class="footer-copyright">© 2026 BASIC VIDEO WORKS</small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- トップに戻るボタン -->
+    <a href="#" class="pagetop" id="js-pagetop" aria-label="ページトップへ戻る">
+      <span class="pagetop__arrow"></span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="../js/entry.js" type="module"></script>
+  </body>
+</html>

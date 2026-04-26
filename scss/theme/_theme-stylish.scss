@@ -1,0 +1,598 @@
+.theme-stylish {
+  --color-text: #222;
+  --color-sub-text: #666;
+  --color-bg: #fff;
+  --color-bg-light: #f3f4f5;
+  --color-border: #d8d8d8;
+
+  --color-button: #111;
+  --color-button-text: #fff;
+
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-pill: 0;
+
+  --color-card-bg-start: #f6f7f8;
+  --color-card-bg-end: #ffffff;
+  --color-card-deco: rgba(17, 17, 17, 0.04);
+}
+
+/* =====================================
+  Stylish Header
+===================================== */
+
+.theme-stylish .site-header {
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.theme-stylish .header__bg {
+  background: transparent;
+}
+
+.theme-stylish .header-bar {
+  min-height: 64px;
+}
+
+.theme-stylish .brand {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+}
+
+.theme-stylish .desktop-nav .nav-links {
+  gap: 28px;
+}
+
+.theme-stylish .desktop-nav .nav-link {
+  width: auto;
+  padding: 0;
+  border: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.theme-stylish .desktop-nav .nav-link:last-child {
+  border-bottom: 0;
+}
+
+.theme-stylish .desktop-nav .nav-link:hover {
+  opacity: 0.65;
+}
+
+/* =====================================
+  Stylish FV
+===================================== */
+
+.theme-stylish .fv::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.24);
+  pointer-events: none;
+}
+
+.theme-stylish .fv__bg {
+  z-index: -1;
+}
+
+.theme-stylish .fv__frame {
+  z-index: 1;
+}
+
+.theme-stylish .fv__container {
+  max-width: 560px;
+  padding: 36px 44px;
+  border-radius: 0;
+  background: rgba(3, 6, 10, 0.88);
+  color: #fff;
+  backdrop-filter: none;
+
+  border-left: 4px solid #fff;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.42),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.theme-stylish .fv__container h1 {
+  color: #fff;
+}
+
+.theme-stylish .fv__container p {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+// .theme-stylish .fv__container {
+//   max-width: 560px;
+//   padding: 36px 44px;
+//   border-left: 4px solid #fff;
+//   border-radius: 0;
+//   background: rgba(12, 16, 20, 0.72);
+//   color: #fff;
+//   backdrop-filter: none;
+// }
+
+// .theme-stylish .fv__container h1 {
+//   font-size: 40px;
+//   font-weight: 600;
+//   letter-spacing: 0.08em;
+// }
+
+// .theme-stylish .fv__container p {
+//   margin-top: 16px;
+//   font-size: 14px;
+//   letter-spacing: 0.04em;
+// }
+
+@media screen and (max-width: 767px) {
+  .theme-stylish .fv__container {
+    padding: 24px;
+    border-left-width: 3px;
+  }
+
+  .theme-stylish .fv__container h1 {
+    font-size: 28px;
+    letter-spacing: 0.06em;
+  }
+}
+/* =====================================
+  Stylish Section
+===================================== */
+
+.theme-stylish .section {
+  padding: 72px 0;
+}
+
+.theme-stylish .section--first {
+  padding-top: 88px;
+}
+
+.theme-stylish .section-label {
+  margin-bottom: 18px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  color: var(--color-sub-text);
+}
+
+.theme-stylish .section-title {
+  margin-bottom: 28px;
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.theme-stylish .section-text {
+  line-height: 2;
+  color: var(--color-text);
+}
+
+/* =====================================
+  Stylish Point Card
+===================================== */
+
+.theme-stylish .point-list {
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.theme-stylish .point-card {
+  padding: 36px 32px;
+  border-color: var(--color-border);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+}
+
+.theme-stylish .point-card::before {
+  top: 0;
+  right: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 0%,
+    transparent 50%,
+    rgba(17, 17, 17, 0.04) 50%,
+    rgba(17, 17, 17, 0.04) 100%
+  );
+}
+
+.theme-stylish .point-card:hover {
+  transform: translateY(-4px);
+  border-color: #111;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.theme-stylish .point-card__number {
+  width: auto;
+  height: auto;
+  margin-bottom: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--color-sub-text);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+}
+
+.theme-stylish .point-card__title {
+  margin-bottom: 16px;
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.theme-stylish .point-card__text {
+  line-height: 2;
+  color: #444;
+}
+@media screen and (max-width: 767px) {
+  .theme-stylish .section {
+    padding: 64px 0;
+  }
+
+  .theme-stylish .section--first {
+    padding-top: 64px;
+  }
+
+  .theme-stylish .section-title {
+    font-size: 26px;
+  }
+
+  .theme-stylish .point-list {
+    gap: 18px;
+    margin-top: 40px;
+  }
+
+  .theme-stylish .point-card {
+    padding: 28px 24px;
+  }
+
+  .theme-stylish .point-card__number {
+    margin-bottom: 20px;
+  }
+}
+/* =====================================
+  Stylish Works List
+===================================== */
+
+.theme-stylish .work-list {
+  background: var(--color-bg-light);
+}
+
+.theme-stylish .work-cards {
+  gap: 28px;
+}
+
+.theme-stylish .work-card {
+  border-color: var(--color-border);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.theme-stylish .work-card:hover {
+  transform: translateY(-4px);
+  border-color: #111;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.theme-stylish .work-card__thumb {
+  border-radius: 0;
+  background: #111;
+}
+
+.theme-stylish .work-card__thumb img {
+  filter: grayscale(0.15) contrast(1.05);
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.theme-stylish .work-card:hover .work-card__thumb img {
+  transform: scale(1.04);
+  filter: grayscale(0) contrast(1.08);
+  opacity: 0.88;
+}
+
+.theme-stylish .work-card__play {
+  width: 56px;
+  height: 56px;
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  font-size: 20px;
+}
+
+.theme-stylish .work-card__thumb:hover .work-card__play {
+  transform: scale(1);
+  background: #fff;
+}
+
+.theme-stylish .work-card__body {
+  padding: 28px 28px 30px;
+}
+
+.theme-stylish .work-card__category {
+  margin-bottom: 10px;
+  color: var(--color-sub-text);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.theme-stylish .work-card__title {
+  margin-bottom: 18px;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+.theme-stylish .work-card__text {
+  margin-bottom: 28px;
+  color: #444;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.theme-stylish .work-card__button {
+  min-height: 42px;
+  padding: 0 22px;
+  border-color: #111;
+  border-radius: 0;
+  color: #111;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-stylish .work-card__button:hover {
+  background: #111;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-stylish .work-cards {
+    gap: 24px;
+  }
+
+  .theme-stylish .work-card__body {
+    padding: 24px;
+  }
+
+  .theme-stylish .work-card__title {
+    font-size: 19px;
+  }
+
+  .theme-stylish .work-card__button {
+    width: 100%;
+  }
+}
+/* =====================================
+  Stylish Message / CTA
+===================================== */
+
+.theme-stylish .message-section {
+  background: #fff;
+}
+
+.theme-stylish .message-section .section-label,
+.theme-stylish .cta-section .section-label {
+  letter-spacing: 0.18em;
+}
+
+.theme-stylish .message-section .section-title,
+.theme-stylish .cta-section .section-title {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.theme-stylish .message-section .section-text {
+  color: #444;
+  line-height: 2;
+}
+
+/* CTA */
+.theme-stylish .cta-section {
+  background: #46545f;
+  color: #fff;
+  border-top: 0;
+}
+
+.theme-stylish .cta-section .section-label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.theme-stylish .cta-section .section-title {
+  color: #fff;
+}
+
+.theme-stylish .cta-section .section-text {
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 2;
+}
+
+.theme-stylish .cta-section .button {
+  min-width: 180px;
+  min-height: 48px;
+  margin-top: 36px;
+  padding: 0 32px;
+  border-radius: 0;
+  background: #fff;
+  color: #111;
+  border: 1px solid #fff;
+  letter-spacing: 0.06em;
+}
+
+.theme-stylish .cta-section .button:hover {
+  background: transparent;
+  color: #fff;
+  border-color: #fff;
+}
+
+/* =====================================
+  Stylish Footer
+===================================== */
+
+.theme-stylish .site-footer {
+  background: #111421;
+  color: #fff;
+}
+
+.theme-stylish .footer__bg {
+  background: transparent;
+}
+
+.theme-stylish .site-footer__main {
+  padding: 40px 0;
+  border-top: 0;
+}
+
+.theme-stylish .footer-nav .nav-links {
+  gap: 28px;
+}
+
+.theme-stylish .footer-nav .nav-link {
+  width: auto;
+  padding: 0;
+  border: 0;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 14px;
+  letter-spacing: 0.06em;
+}
+
+.theme-stylish .footer-nav .nav-link:last-child {
+  border-bottom: 0;
+}
+
+.theme-stylish .footer-nav .nav-link:hover {
+  color: #fff;
+  opacity: 1;
+}
+
+.theme-stylish .footer-meta {
+  margin-top: 24px;
+}
+
+.theme-stylish .footer-copyright {
+  color: rgba(255, 255, 255, 0.42);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.footer-nav .nav-link__text {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+/* =====================================
+  Stylish Flow
+===================================== */
+
+.theme-stylish .service-flow {
+  background: var(--color-bg-light);
+}
+
+.theme-stylish .service-flow__list {
+  max-width: 900px;
+  margin-top: 56px;
+}
+
+.theme-stylish .service-flow__item {
+  grid-template-columns: 88px 1fr;
+  gap: 36px;
+  padding-bottom: 44px;
+}
+
+.theme-stylish .service-flow__item::before {
+  top: 48px;
+  left: 43px;
+  width: 1px;
+  height: calc(100% - 48px);
+  background: #cfd3d6;
+}
+
+.theme-stylish .service-flow__num {
+  width: 88px;
+  height: 48px;
+  border-radius: 0;
+  border: 1px solid #cfd3d6;
+  background: #fff;
+  color: #444;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+}
+
+.theme-stylish .service-flow__body {
+  padding-top: 4px;
+}
+
+.theme-stylish .service-flow__body h3 {
+  margin-bottom: 14px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.theme-stylish .service-flow__body p {
+  color: #444;
+  line-height: 2;
+}
+
+.theme-stylish .service-flow__item:hover .service-flow__num {
+  border-color: #111;
+  background: #111;
+  color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-stylish .service-flow__list {
+    margin-top: 40px;
+  }
+
+  .theme-stylish .service-flow__item {
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    padding-bottom: 36px;
+  }
+
+  .theme-stylish .service-flow__item::before {
+    top: 42px;
+    left: 31px;
+    height: calc(100% - 42px);
+  }
+
+  .theme-stylish .service-flow__num {
+    width: 64px;
+    height: 42px;
+    font-size: 12px;
+  }
+
+  .theme-stylish .service-flow__body h3 {
+    font-size: 19px;
+  }
+
+  .theme-stylish .service-flow__body p {
+    font-size: 14px;
+  }
+}

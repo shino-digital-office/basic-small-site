@@ -25,11 +25,11 @@ html {
 
 /* 共通決めごと */
 body {
-  font-family: variables.$font-family-main; //デフォルト
+  font-family: variables.$font-family-main; // デフォルト
 
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--color-bg, #fff);
+  color: var(--color-text, #333);
 }
 h1 {
   font-size: 32px;
