@@ -75,39 +75,39 @@
   align-items: center;
   width: fit-content;
 
-  border-radius: 40px;
-  background: #fff;
-  color: #555;
+  border-radius: 999px;
+  background: #333;
+  color: #fff;
 
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
   line-height: 1.6;
+  text-decoration: none;
 
-  border-style: solid;
-  border-color: #555;
-  box-shadow: 0 4px 0 0 #555;
+  border: 1px solid #333;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
 
   &:hover {
-    background: #1391e6;
+    background: #fff;
+    color: #333;
     text-decoration: none;
   }
 }
 
 @mixin button-size($size) {
   @if $size == small {
-    padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+    padding: 8px 22px;
     font-size: 14px;
-    border-width: 2px;
   } @else if $size == middle {
-    padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px);
+    padding: 10px 28px;
     font-size: 16px;
-    border-width: 2px;
-
     font-feature-settings: "pref" on;
   } @else if $size == large {
-    padding: calc(10px - 3px) calc(40px - 3px) calc(12px - 3px);
-    font-size: 20px;
-    border-width: 3px;
+    padding: 14px 40px;
+    font-size: 18px;
   }
 }
 
@@ -123,31 +123,54 @@
 //       }
 
 /* =====================================
-    トップに戻るボタン
-
+  トップに戻るボタン
 ===================================== */
 
 .pagetop {
   position: fixed;
-  right: 10px;
-  bottom: 40px;
-  z-index: $z-footer-fixed + 1; // 固定フッターより上に表示。デザインによって変更可。
-  width: 52px;
-  height: 52px;
-  img {
-    width: 100%;
-  }
-  opacity: 1;
+  right: 20px;
+  bottom: 24px;
+  z-index: $z-footer-fixed + 1;
+
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid #333;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  text-decoration: none;
+
+  opacity: 0;
   visibility: hidden;
   transition:
     opacity 0.3s,
-    visibility 0.3s;
+    visibility 0.3s,
+    background 0.2s ease,
+    color 0.2s ease;
+
   &.is-show {
     opacity: 1;
     visibility: visible;
   }
-  @include mq(md) {
-    right: 20px;
-    bottom: 100px;
+
+  &:hover {
+    background: #333;
+    color: #fff;
   }
+
+  @include mq(md) {
+    right: 32px;
+    bottom: 32px;
+  }
+}
+
+.pagetop__arrow {
+  width: 14px;
+  height: 14px;
+  border-top: 2px solid currentColor;
+  border-left: 2px solid currentColor;
+  transform: translateY(4px) rotate(45deg);
 }

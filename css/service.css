@@ -1,0 +1,306 @@
+/* =====================================
+  Service Page
+===================================== */
+.page-about .main-content {
+  background: #fff;
+}
+.page-about .fv__frame {
+  align-items: center;
+  justify-items: start;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+.page-about .fv__container {
+  max-width: 560px;
+  padding: 32px 40px;
+  background: rgba(38, 45, 50, 0.58);
+  color: #fff;
+  border-radius: 10px;
+}
+.page-about .fv__container h1 {
+  font-size: 36px;
+  letter-spacing: 0.03em;
+}
+.page-about .fv__caption {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* =====================================
+  Common Section Style
+===================================== */
+.work-lead,
+.about-profile,
+.about-message,
+.work-contact {
+  padding: 80px 0;
+}
+
+.section-label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.work-lead h2,
+.about-profile h2,
+.about-message h2,
+.work-contact h2 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.work-lead p,
+.about-profile p,
+.about-profile dd,
+.about-message p,
+.work-contact p {
+  line-height: 1.9;
+}
+
+/* =====================================
+  Concept
+===================================== */
+.work-lead {
+  padding-top: 96px;
+}
+
+.work-lead__text {
+  margin-top: 24px;
+}
+
+.work-lead__points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.work-lead__point {
+  padding: 28px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.work-lead__point span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #777;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.work-lead__point h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.work-lead__point p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =====================================
+  Flow
+===================================== */
+.service-flow {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.service-flow h2 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.service-flow__lead {
+  line-height: 1.9;
+}
+
+.service-flow__list {
+  max-width: 840px;
+  margin: 48px auto 0;
+}
+
+.service-flow__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.service-flow__item::before {
+  content: "";
+  position: absolute;
+  top: 44px;
+  left: 39px;
+  width: 1px;
+  height: calc(100% - 44px);
+  background: #d8d8d8;
+}
+
+.service-flow__item:last-child {
+  padding-bottom: 0;
+}
+
+.service-flow__item:last-child::before {
+  display: none;
+}
+
+.service-flow__num {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #d8d8d8;
+  border-radius: 50%;
+  background: #fff;
+  color: #777;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+}
+
+.service-flow__body {
+  padding-top: 8px;
+}
+
+.service-flow__body h3 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.service-flow__body p {
+  font-size: 15px;
+  line-height: 1.9;
+  color: #555;
+}
+
+/* =====================================
+  Responsive
+===================================== */
+@media screen and (max-width: 767px) {
+  .service-flow {
+    padding: 56px 0;
+  }
+  .service-flow h2 {
+    font-size: 24px;
+  }
+  .service-flow__list {
+    margin-top: 32px;
+  }
+  .service-flow__item {
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    padding-bottom: 32px;
+  }
+  .service-flow__item::before {
+    top: 36px;
+    left: 27px;
+    height: calc(100% - 36px);
+  }
+  .service-flow__num {
+    width: 56px;
+    height: 56px;
+    font-size: 13px;
+  }
+  .service-flow__body {
+    padding-top: 2px;
+  }
+  .service-flow__body h3 {
+    font-size: 18px;
+  }
+  .service-flow__body p {
+    font-size: 14px;
+  }
+}
+/* =====================================
+  Message
+===================================== */
+.about-message {
+  text-align: center;
+}
+
+.about-message .inner {
+  max-width: 880px;
+}
+
+.about-message p {
+  margin-top: 24px;
+}
+
+/* =====================================
+  Contact
+===================================== */
+.work-contact {
+  margin-top: 40px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.work-contact .button {
+  margin-top: 32px;
+  padding: 10px 28px;
+  font-size: 16px;
+}
+
+/* =====================================
+  Responsive
+===================================== */
+@media screen and (max-width: 767px) {
+  .page-about .fv__container {
+    max-width: 100%;
+    padding: 24px;
+  }
+  .page-about .fv__container h1 {
+    font-size: 28px;
+  }
+  .work-lead,
+  .about-profile,
+  .about-message,
+  .work-contact {
+    padding: 56px 0;
+  }
+  .work-lead h2,
+  .about-profile h2,
+  .about-message h2,
+  .work-contact h2 {
+    font-size: 24px;
+  }
+  .work-lead__points {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  .work-lead__point {
+    padding: 24px;
+  }
+  .about-profile__lead {
+    margin-bottom: 32px;
+  }
+  .about-profile__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .about-profile__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 0;
+  }
+  .about-message {
+    text-align: left;
+  }
+}/*# sourceMappingURL=service.css.map */

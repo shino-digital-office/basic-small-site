@@ -1,0 +1,56 @@
+/* =====================================
+  Common Layout
+===================================== */
+
+.base__bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.main-layout {
+  position: relative;
+  overflow-x: clip;
+}
+
+.main-hero {
+  position: relative;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.main-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.main-body {
+  position: relative;
+
+  @media screen and (min-width: 768px) {
+    // max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+}
+
+.main-body__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 紙面型では中央寄せしない */
+.main-content .container {
+  max-width: none;
+  margin: 0;
+}

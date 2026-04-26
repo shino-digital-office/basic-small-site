@@ -1,13 +1,11 @@
 /* ----------------------
    fvのimgをbgとして使う型
    ---------------------- */
-// fvのheightは基本的に指定しておくこと。そうしないと、bgの高さが出ない。
+
 .fv {
   position: relative;
   overflow: hidden;
-  height: calc(
-    100vh - 60px
-  ); //全画面　‐　ヘッダー (フッターはfvに重なる存在と割り切る)
+  height: 420px; // 下層ページの基本サイズ
 }
 
 .fv__bg {
@@ -15,38 +13,67 @@
   inset: 0;
   z-index: -1;
 
+  picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
   img {
-    //imgの縦横の縮尺比率は変えないが、imgの大きさは親要素に合わせる
-    //つまり、親要素をカバーしたうえで、余ったimgは切り取られる
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center; //中央配置
+    object-position: center;
   }
 }
 
 .fv__frame {
   position: absolute;
-  inset: 0 20px; // ← ここが「配置用フレーム」。innerもここで取る。
+  inset: 0 20px;
   display: grid;
-  place-items: center; // 中央に“置く”
+  place-items: center;
 }
 
-/* コンテナを親要素内に自在に配置 */
 .fv__container {
   position: relative;
   width: 100%;
-  padding: 1rem 1.25rem;
-  max-width: 760px;
+  max-width: 680px;
+  padding: 32px 40px;
 
   background: rgba(0, 0, 0, 0.55);
-  color: #aaffcc;
+  color: #fff;
   border-radius: 12px;
   backdrop-filter: blur(4px);
 
   h1 {
+    margin: 0;
+    font-size: 40px;
+    line-height: 1.4;
+    font-weight: 700;
   }
 
   p {
+    margin-top: 16px;
+    line-height: 1.8;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .fv {
+    height: 320px;
+  }
+
+  .fv__frame {
+    inset: 0 16px;
+  }
+
+  .fv__container {
+    max-width: 100%;
+    padding: 24px;
+  }
+
+  .fv__container h1 {
+    font-size: 28px;
   }
 }

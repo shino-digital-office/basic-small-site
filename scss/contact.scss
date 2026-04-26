@@ -1,0 +1,434 @@
+/* =====================================
+  Contact Page
+===================================== */
+
+.page-about {
+  .main-content {
+    background: #fff;
+  }
+
+  .fv__frame {
+    align-items: center;
+    justify-items: start;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .fv__container {
+    max-width: 560px;
+    padding: 32px 40px;
+    background: rgba(38, 45, 50, 0.58);
+    color: #fff;
+    border-radius: 10px;
+  }
+
+  .fv__container h1 {
+    font-size: 36px;
+    letter-spacing: 0.03em;
+  }
+
+  .fv__caption {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.8;
+  }
+}
+
+/* =====================================
+  Common Section Style
+===================================== */
+
+.work-lead,
+.about-profile,
+.about-message,
+.work-contact {
+  padding: 80px 0;
+}
+
+.section-label {
+  margin-bottom: 12px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  color: #777;
+  text-transform: uppercase;
+}
+
+.work-lead h2,
+.about-profile h2,
+.about-message h2,
+.work-contact h2 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.work-lead p,
+.about-profile p,
+.about-profile dd,
+.about-message p,
+.work-contact p {
+  line-height: 1.9;
+}
+
+/* =====================================
+  Concept
+===================================== */
+
+.work-lead {
+  padding-top: 96px;
+}
+
+.work-lead__text {
+  margin-top: 24px;
+}
+
+.work-lead__points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.work-lead__point {
+  padding: 28px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.work-lead__point span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #777;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.work-lead__point h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.work-lead__point p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =====================================
+  Before Contact
+===================================== */
+
+.contact-before {
+  padding: 96px 0 80px;
+  background: #fff;
+}
+
+.contact-before h2,
+.contact-form-section h2 {
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.contact-before__lead,
+.contact-form-section__lead {
+  line-height: 1.9;
+}
+
+.contact-before__points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.contact-before__point {
+  padding: 28px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.contact-before__point span {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #777;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.contact-before__point h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.contact-before__point p {
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* =====================================
+  Contact Form
+===================================== */
+
+.contact-form-section {
+  padding: 80px 0;
+  background: #f8f8f8;
+}
+
+.contact-form {
+  max-width: 760px;
+  margin: 48px auto 0;
+  padding: 40px;
+  border: 1px solid #e5e5e5;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.contact-form__item + .contact-form__item {
+  margin-top: 24px;
+}
+
+.contact-form__item label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.contact-form__item input,
+.contact-form__item select,
+.contact-form__item textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 15px;
+}
+
+.contact-form__item textarea {
+  resize: vertical;
+}
+
+.contact-form__item input::placeholder,
+.contact-form__item textarea::placeholder {
+  color: #aaa;
+}
+
+.contact-form__button {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.contact-form__button button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 180px;
+  min-height: 48px;
+  padding: 0 32px;
+  border: 1px solid #333;
+  border-radius: 999px;
+  background: #333;
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.contact-form__button button:hover {
+  background: #fff;
+  color: #333;
+}
+
+/* =====================================
+  Responsive
+===================================== */
+
+@media screen and (max-width: 767px) {
+  .contact-before,
+  .contact-form-section {
+    padding: 56px 0;
+  }
+
+  .contact-before h2,
+  .contact-form-section h2 {
+    font-size: 24px;
+  }
+
+  .contact-before__points {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .contact-before__point {
+    padding: 24px;
+  }
+
+  .contact-form {
+    margin-top: 32px;
+    padding: 24px;
+  }
+
+  .contact-form__item + .contact-form__item {
+    margin-top: 20px;
+  }
+
+  .contact-form__button {
+    text-align: left;
+  }
+
+  .contact-form__button button {
+    width: 100%;
+  }
+}
+
+/* =====================================
+  Responsive
+===================================== */
+
+@media screen and (max-width: 767px) {
+  .service-flow {
+    padding: 56px 0;
+  }
+
+  .service-flow h2 {
+    font-size: 24px;
+  }
+
+  .service-flow__list {
+    margin-top: 32px;
+  }
+
+  .service-flow__item {
+    grid-template-columns: 56px 1fr;
+    gap: 20px;
+    padding-bottom: 32px;
+  }
+
+  .service-flow__item::before {
+    top: 36px;
+    left: 27px;
+    height: calc(100% - 36px);
+  }
+
+  .service-flow__num {
+    width: 56px;
+    height: 56px;
+    font-size: 13px;
+  }
+
+  .service-flow__body {
+    padding-top: 2px;
+  }
+
+  .service-flow__body h3 {
+    font-size: 18px;
+  }
+
+  .service-flow__body p {
+    font-size: 14px;
+  }
+}
+
+/* =====================================
+  Message
+===================================== */
+
+.about-message {
+  text-align: center;
+}
+
+.about-message .inner {
+  max-width: 880px;
+}
+
+.about-message p {
+  margin-top: 24px;
+}
+
+/* =====================================
+  Contact
+===================================== */
+
+.work-contact {
+  margin-top: 40px;
+  background: #f5f5f5;
+  text-align: center;
+}
+
+.work-contact .button {
+  margin-top: 32px;
+  padding: 10px 28px;
+  font-size: 16px;
+}
+
+/* =====================================
+  Responsive
+===================================== */
+
+@media screen and (max-width: 767px) {
+  .page-about {
+    .fv__container {
+      max-width: 100%;
+      padding: 24px;
+    }
+
+    .fv__container h1 {
+      font-size: 28px;
+    }
+  }
+
+  .work-lead,
+  .about-profile,
+  .about-message,
+  .work-contact {
+    padding: 56px 0;
+  }
+
+  .work-lead h2,
+  .about-profile h2,
+  .about-message h2,
+  .work-contact h2 {
+    font-size: 24px;
+  }
+
+  .work-lead__points {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .work-lead__point {
+    padding: 24px;
+  }
+
+  .about-profile__lead {
+    margin-bottom: 32px;
+  }
+
+  .about-profile__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-profile__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 18px 0;
+  }
+
+  .about-message {
+    text-align: left;
+  }
+}
