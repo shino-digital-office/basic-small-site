@@ -1,35 +1,73 @@
-// Colors
-//デザインカンプ上の色の命名がある場合は、
-//以下で既存定義してあるカラーはいじらずに、新しくカラー名を追加定義するのがおすすめです。
-$color-bg: #ffffff;
-$color-text: #222;
-$color-accent: #2f3942;
-$color-white: #fff;
-$color-gray-dark: #555;
-$color-gray-light: #f7f7f7;
-$color-gray-sidebar: #fde7d9;
-$color-accent-secondary: #ee5a6d;
-$color-main: #1391e6;
-$color-base: #fff;
-$color-main-light: #dff1fd;
+// ========================================
+// Variables
+// ========================================
 
+// ----------------------------------------
+// Colors
+// ----------------------------------------
+
+$color-white: #fff;
+
+$color-text: #333;
+$color-sub-text: #777;
+
+$color-bg: #fff;
+$color-bg-light: #f8f8f8;
+
+$color-border: #e5e5e5;
+
+$color-accent: #2f3942;
+
+// ----------------------------------------
+// Layout
+// ----------------------------------------
+
+$layout-max-width: 1080px;
+$container-max-width: 1100px;
+
+$header-height: 56px; // SPヘッダー高さの目安
+$header-height-pc: 40px; // PCヘッダー高さの目安
+
+$drawer-width: 80%; // ドロワー幅
+
+$sidebar-width: 240px; // サイドバー幅
+
+// ----------------------------------------
 // Spacing
+// ----------------------------------------
+
 $space-xs: 8px;
 $space-sm: 12px;
 $space-md: 16px;
-$space-lg: 20px;
+$space-lg: 24px;
 $space-xl: 32px;
 $space-2xl: 48px;
 $space-3xl: 60px;
 
+// ----------------------------------------
+// Section
+// ----------------------------------------
+
+$section-padding-pc: 80px;
+$section-padding-sp: 56px;
+$section-padding-first-pc: 96px;
+
+// ----------------------------------------
 // Font
+// ----------------------------------------
+
 /* ================================
-  　フォントの設定方法
-    step1:サイトで使うフォントをすべて洗い出し、Google Fontsにアクセスして"Get font"
-    step2:"Get font"したhtmlのコードをheadに貼る
-    step3:"Get font"したcssのコードを_variables.scss(このファイル)に貼り、変数名を付ける
-    step4:デフォルト以外のフォントを使いたい場面では定義した変数名を呼び出す
-   ================================ */
+  フォントの設定方法
+
+  step1: サイトで使うフォントをすべて洗い出し、
+         Google Fontsにアクセスして "Get font"
+  step2: "Get font" したhtmlのコードをheadに貼る
+  step3: "Get font" したcssのコードを_variables.scssに貼り、
+         変数名を付ける
+  step4: デフォルト以外のフォントを使いたい場面では
+         定義した変数名を呼び出す
+================================ */
+
 $font-family-main:
   "Noto Sans JP",
   system-ui,
@@ -37,37 +75,54 @@ $font-family-main:
   "Segoe UI",
   Roboto,
   "Helvetica Neue",
-  Arial; //bodyで使用するデフォルトのフォント
+  Arial,
+  sans-serif;
 
-$font-family-jp: "Kiwi Maru", serif;
-$font-family-en: "Courgette", cursive;
+$font-family-jp: "Noto Sans JP", sans-serif;
+$font-family-en: "Noto Sans JP", sans-serif;
+
 $font-weight-bold: 700;
 
-// Sizes
-$header-height: 56px; // ヘッダー高さの目安
-$header-height-pc: 40px; // PC 用ヘッダー高さの目安
-$sidebar-width: 240px; //サイドバーの横幅
-$drawer-width: 80%; //ドロワー幅。100%(全画面)またはpx指定
-$container-max-width: 1100px;
+// ----------------------------------------
+// Typography
+// ----------------------------------------
 
+$font-size-section-label: 14px;
+$font-size-heading-lg: 32px;
+$font-size-heading-md: 24px;
+$font-size-card-title: 18px;
+
+$line-height-body: 1.9;
+
+// ----------------------------------------
+// Border radius
+// ----------------------------------------
+
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 16px;
+
+// ----------------------------------------
 // Z-index
-$z-header: 60; // ヘッダーおよびヘッダーに属するドロワー要素
+// ----------------------------------------
+
+$z-header: 60;
 $z-footer: auto;
 $z-sidebar: 40;
 $z-footer-fixed: 50;
-// $z-drawer-overlay: 55; // 廃止。headerより下に表示する場合はこの値を使用せず、$z-header より小さい値を直接指定してください。
 
-// Paper Layer (構造レイヤー)
+// ----------------------------------------
+// Paper Layer
+// 背景レイヤー設計用
+// ----------------------------------------
+
 $z-paper-bg: -1; // 背景の紙
-$z-paper-overlay: 1; // オーバーレイ（半透明）
-$z-paper-content: 2; // 文字・UIの紙
+$z-paper-overlay: 1; // オーバーレイ
+$z-paper-content: 2; // 文字・UI
 $z-paper-float: 3; // 装飾やフロートUI
 
-// Border radius
-$radius-sm: 6px;
-$radius-md: 12px;
-
+// ----------------------------------------
 // Transitions
-$transition-default: 0.28s ease;
+// ----------------------------------------
 
-$layout-max-width: 1080px;
+$transition-default: 0.28s ease;

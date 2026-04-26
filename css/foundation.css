@@ -127,12 +127,16 @@ button {
 }
 
 /* ================================
-  　フォントの設定方法
-    step1:サイトで使うフォントをすべて洗い出し、Google Fontsにアクセスして"Get font"
-    step2:"Get font"したhtmlのコードをheadに貼る
-    step3:"Get font"したcssのコードを_variables.scss(このファイル)に貼り、変数名を付ける
-    step4:デフォルト以外のフォントを使いたい場面では定義した変数名を呼び出す
-   ================================ */
+  フォントの設定方法
+
+  step1: サイトで使うフォントをすべて洗い出し、
+         Google Fontsにアクセスして "Get font"
+  step2: "Get font" したhtmlのコードをheadに貼る
+  step3: "Get font" したcssのコードを_variables.scssに貼り、
+         変数名を付ける
+  step4: デフォルト以外のフォントを使いたい場面では
+         定義した変数名を呼び出す
+================================ */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 64px;
@@ -147,7 +151,7 @@ html {
 
 /* 共通決めごと */
 body {
-  font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: "Noto Sans JP", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
   background-color: #fff;
   color: #333;
@@ -193,7 +197,7 @@ a:hover {
 }
 
 .inner {
-  padding: 0 20px;
+  padding: 0 24px;
   /* 最後に来たテキスト要素だけ margin-bottom を殺す */
 }
 .inner > :last-child {
@@ -201,13 +205,13 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1120px;
+    max-width: 1128px;
     margin: 0 auto;
   }
 }
 
 .inner--flex {
-  padding: 0 20px;
+  padding: 0 24px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -228,7 +232,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .inner--flex {
-    max-width: 1120px;
+    max-width: 1128px;
     margin: 0 auto;
   }
 }
