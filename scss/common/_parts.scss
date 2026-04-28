@@ -355,3 +355,75 @@
   background: var(--color-bg);
   color: var(--color-button);
 }
+
+/* =====================================
+  Sample Mark
+===================================== */
+
+body {
+  &::after {
+    content: "SAMPLE";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-12deg);
+    z-index: 9999;
+
+    font-size: clamp(72px, 12vw, 180px);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    line-height: 1;
+    white-space: nowrap;
+
+    color: rgba(200, 0, 0, 0.18);
+    -webkit-text-stroke: 1px rgba(200, 0, 0, 0.08);
+
+    pointer-events: none;
+    user-select: none;
+  }
+}
+
+/* SOFT：少しやわらかい赤 */
+.theme-soft {
+  &::after {
+    color: rgba(210, 80, 80, 0.16);
+    -webkit-text-stroke: 1px rgba(210, 80, 80, 0.06);
+  }
+}
+
+/* STYLISH：暗背景でも見える赤バッジ */
+.theme-stylish {
+  &::after {
+    content: "SAMPLE SITE";
+    top: 88px;
+    left: auto;
+    right: 24px;
+    transform: none;
+
+    padding: 8px 16px;
+    border: 1px solid rgba(255, 80, 80, 0.55);
+    background: rgba(30, 0, 0, 0.45);
+    color: rgba(255, 120, 120, 0.9);
+    -webkit-text-stroke: 0;
+
+    font-size: 13px;
+    letter-spacing: 0.14em;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    &::after {
+      font-size: clamp(52px, 18vw, 100px);
+    }
+  }
+
+  .theme-stylish {
+    &::after {
+      top: 72px;
+      right: 16px;
+      padding: 6px 12px;
+      font-size: 11px;
+    }
+  }
+}

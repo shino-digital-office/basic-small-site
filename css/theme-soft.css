@@ -28,7 +28,7 @@
 }
 
 .theme-soft .header-bar {
-  min-height: 64px;
+  min-height: 56px;
 }
 
 .theme-soft .brand {
@@ -65,27 +65,58 @@
   Soft FV
 ===================================== */
 .theme-soft .fv__container {
-  max-width: 560px;
-  padding: 36px 44px;
-  border-radius: 24px;
-  background: rgba(255, 250, 246, 0.82);
+  max-width: 620px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
   color: #3a332e;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 18px 48px rgba(138, 111, 90, 0.16);
 }
-
 .theme-soft .fv__container h1 {
   color: #3a332e;
-  font-size: 40px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
+  text-shadow: 0 1px 16px rgba(255, 250, 246, 0.95);
 }
-
 .theme-soft .fv__container p {
   color: #5c5149;
-  margin-top: 16px;
+  text-shadow: 0 1px 12px rgba(255, 250, 246, 0.95);
 }
 
+@media screen and (max-width: 767px) {
+  .theme-soft .fv {
+    height: 400px;
+  }
+  .theme-soft .fv__frame {
+    inset: 0 24px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-top: 56px;
+  }
+  .theme-soft .fv__container {
+    max-width: 86%;
+    padding: 16px 18px;
+    border-radius: 18px;
+    background: rgba(255, 250, 246, 0.62);
+    box-shadow: 0 8px 24px rgba(138, 111, 90, 0.08);
+    backdrop-filter: blur(3px);
+    color: #3a332e;
+  }
+  .theme-soft .fv__container h1 {
+    font-size: 34px;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-shadow: none;
+  }
+  .theme-soft .fv__container p {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #5c5149;
+    text-shadow: none;
+  }
+}
 /* =====================================
   Soft Concept
 ===================================== */
@@ -327,4 +358,8 @@
 .theme-soft .work-card__category {
   font-weight: 500;
   letter-spacing: 0.12em;
+}
+
+.theme-soft {
+  --header-height-sp: 56px;
 }/*# sourceMappingURL=theme-soft.css.map */

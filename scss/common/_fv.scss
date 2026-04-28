@@ -77,3 +77,36 @@
     font-size: 28px;
   }
 }
+
+/* ----------------------
+   sample note
+   ---------------------- */
+
+.sample-note {
+  margin: 12px 20px 0;
+  color: rgba(200, 0, 0, 0.72);
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.theme-soft {
+  .sample-note {
+    color: rgba(190, 70, 70, 0.68);
+  }
+}
+
+.theme-stylish {
+  .sample-note {
+    color: rgba(220, 70, 70, 0.8);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sample-note {
+    margin: 10px 16px 0;
+    font-size: 12px;
+    text-align: left;
+  }
+}

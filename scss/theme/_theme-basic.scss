@@ -13,3 +13,37 @@
   --radius-lg: 16px;
   --radius-pill: 999px;
 }
+
+/* =====================================
+  Basic FV
+===================================== */
+
+@media screen and (max-width: 767px) {
+  .theme-basic .fv {
+    height: 340px;
+  }
+
+  .theme-basic .fv__bg img {
+    object-position: 90% center;
+  }
+
+  .theme-basic .fv__container {
+    max-width: calc(100% - 48px);
+    padding: 22px 24px;
+    background: rgba(38, 45, 50, 0.52);
+  }
+
+  .theme-basic .fv__container h1 {
+    font-size: 28px;
+  }
+
+  .theme-basic .fv__container p {
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+.theme-basic {
+  --header-height-sp: 56px;
+}

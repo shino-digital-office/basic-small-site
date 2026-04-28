@@ -60,6 +60,10 @@
   opacity: 0.65;
 }
 
+.theme-stylish {
+  --header-height-sp: 64px;
+}
+
 /* =====================================
   Stylish FV
 ===================================== */
@@ -103,13 +107,47 @@
 }
 
 @media screen and (max-width: 767px) {
+  .theme-stylish .fv {
+    height: 420px;
+  }
+  .theme-stylish .fv__bg {
+    position: relative;
+  }
+  .theme-stylish .fv__bg img {
+    -o-object-position: 78% center;
+       object-position: 78% center;
+  }
+  .theme-stylish .fv__bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+  }
   .theme-stylish .fv__container {
-    padding: 24px;
-    border-left-width: 3px;
+    position: relative;
+    padding: 28px 28px 28px 32px;
+    background: rgba(0, 0, 0, 0.42);
+    border: none;
+    width: calc(100% - 96px);
+  }
+  .theme-stylish .fv__container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #fff;
   }
   .theme-stylish .fv__container h1 {
-    font-size: 28px;
-    letter-spacing: 0.06em;
+    font-size: 27px;
+    line-height: 1.2;
+  }
+  .theme-stylish .fv__container p {
+    margin-top: 12px;
+    font-size: 13px;
+    line-height: 1.8;
   }
 }
 /* =====================================
@@ -447,6 +485,32 @@
   color: rgba(255, 255, 255, 0.42);
 }
 
+.theme-stylish .footer-nav .nav-link__text {
+  color: inherit;
+}
+
+.theme-stylish .footer-nav .nav-link {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+@media screen and (max-width: 767px) {
+  .theme-stylish .site-footer__main {
+    padding: 32px 0 40px;
+  }
+  .theme-stylish .footer-nav .nav-links {
+    gap: 20px;
+  }
+  .theme-stylish .footer-nav .nav-link {
+    font-size: 13px;
+  }
+  .theme-stylish .footer-meta {
+    margin-top: 20px;
+  }
+  .theme-stylish .footer-copyright {
+    font-size: 11px;
+    letter-spacing: 0.06em;
+  }
+}
 /* =====================================
   Stylish Flow
 ===================================== */
@@ -530,5 +594,49 @@
   }
   .theme-stylish .service-flow__body p {
     font-size: 14px;
+  }
+}
+/* =====================================
+  Stylish Drawer
+===================================== */
+@media screen and (max-width: 767px) {
+  .theme-stylish .drawer-content--in-header {
+    top: 64px;
+    height: calc(100vh - 64px);
+    background: #1b202a;
+    color: #fff;
+    border-left: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: -24px 0 48px rgba(0, 0, 0, 0.28);
+  }
+  .theme-stylish .drawer-nav {
+    padding: 48px 28px;
+  }
+  .theme-stylish .drawer-nav .nav-link {
+    color: rgba(255, 255, 255, 0.84);
+    border-top-color: rgba(255, 255, 255, 0.16);
+    font-size: 18px;
+    letter-spacing: 0.06em;
+  }
+  .theme-stylish .drawer-nav .nav-link:last-child {
+    border-bottom-color: rgba(255, 255, 255, 0.16);
+  }
+  .theme-stylish .drawer-nav .nav-link__text {
+    color: inherit;
+  }
+  .theme-stylish .drawer-nav .nav-link:hover {
+    color: #fff;
+  }
+  .theme-stylish .drawer-overlay {
+    background: rgba(0, 0, 0, 0.48);
+  }
+  .theme-stylish .site-header:has(.drawer-icon--in-header.is-checked) {
+    background: #0f1117;
+    border-bottom-color: rgba(255, 255, 255, 0.12);
+  }
+  .theme-stylish .site-header:has(.drawer-icon--in-header.is-checked) .brand {
+    color: #fff;
+  }
+  .theme-stylish .site-header:has(.drawer-icon--in-header.is-checked) .drawer-icon__bar {
+    background: #fff;
   }
 }/*# sourceMappingURL=theme-stylish.css.map */
