@@ -205,7 +205,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1128px;
+    max-width: 1328px;
     margin: 0 auto;
   }
 }
@@ -232,7 +232,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .inner--flex {
-    max-width: 1128px;
+    max-width: 1328px;
     margin: 0 auto;
   }
 }

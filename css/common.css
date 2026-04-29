@@ -67,6 +67,22 @@
   text-decoration: none;
 }
 
+.button--small {
+  padding: 8px 22px;
+  font-size: 14px;
+}
+
+.button--middle {
+  padding: 10px 28px;
+  font-size: 16px;
+  font-feature-settings: "pref" on;
+}
+
+.button--large {
+  padding: 14px 40px;
+  font-size: 18px;
+}
+
 /* =====================================
   トップに戻るボタン
 ===================================== */

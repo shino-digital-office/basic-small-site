@@ -111,6 +111,18 @@
   }
 }
 
+.button--small {
+  @include button-size(small);
+}
+
+.button--middle {
+  @include button-size(middle);
+}
+
+.button--large {
+  @include button-size(large);
+}
+
 //ボタン書き方見本
 // @include mq(md) {
 //         @include button-size(small);

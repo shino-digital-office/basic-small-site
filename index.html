@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小規模サイト基本プラン｜3つのデザイン比較</title>
+
+    <!-- swiper用のcssの読み込み -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+
+    <!-- cssの読み込み foundation(母艦)→common(共通パーツ)→ページ固有のスタイル の順に読み込む -->
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body class="page-design-sample">
+    <!-- サイト全体のbg(不要ならコメントアウト) -->
+    <div class="base__bg"></div>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+      <!-- ヘッダーのbg -->
+      <div class="header__bg"></div>
+
+      <!-- ヘッダーのレイアウト -->
+      <div class="header-bar inner--flex">
+        <a
+          class="brand"
+          href="https://shino-digital-office.com/"
+          aria-label="Shino's ポートフォリオへ戻る"
+        >
+          <img
+            src="./assets/images/index/shino-logo-5.png"
+            alt="shino’s"
+            class="brand__logo"
+          />
+        </a>
+
+        <!-- Desktop navigation -->
+        <nav class="desktop-nav">
+          <div class="nav-links flex-layout--row">
+            <a href="#concept" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__icon">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-about"></use>
+                  </svg>
+                </span>
+                <span class="nav-link__text">Concept</span>
+              </span>
+              <span class="nav-link__deco">
+                <svg>
+                  <use href="./assets/images/icons.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+
+            <a href="#designs" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__icon">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-blog"></use>
+                  </svg>
+                </span>
+                <span class="nav-link__text">Designs</span>
+              </span>
+              <span class="nav-link__deco">
+                <svg>
+                  <use href="./assets/images/icons.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+
+            <a href="#compare" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__icon">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-home"></use>
+                  </svg>
+                </span>
+                <span class="nav-link__text">Compare</span>
+              </span>
+              <span class="nav-link__deco">
+                <svg>
+                  <use href="./assets/images/icons.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </nav>
+
+        <!-- Drawer Icon -->
+        <button id="js-drawer-icon" class="drawer-icon--in-header">
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+          <span class="drawer-icon__bar"></span>
+        </button>
+      </div>
+
+      <!-- Drawer -->
+      <div id="js-drawer-content" class="drawer-content--in-header">
+        <nav class="drawer-nav inner--flex">
+          <div class="nav-links">
+            <a href="#concept" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__icon">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-about"></use>
+                  </svg>
+                </span>
+                <span class="nav-link__text">Concept</span>
+              </span>
+              <span class="nav-link__deco">
+                <svg>
+                  <use href="./assets/images/icons.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+
+            <a href="#designs" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__icon">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-blog"></use>
+                  </svg>
+                </span>
+                <span class="nav-link__text">Designs</span>
+              </span>
+              <span class="nav-link__deco">
+                <svg>
+                  <use href="./assets/images/icons.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+
+            <a href="#compare" class="nav-link nav-link--link">
+              <span class="nav-link__main">
+                <span class="nav-link__icon">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-home"></use>
+                  </svg>
+                </span>
+                <span class="nav-link__text">Compare</span>
+              </span>
+              <span class="nav-link__deco">
+                <svg>
+                  <use href="./assets/images/icons.svg#icon-arrow"></use>
+                </svg>
+              </span>
+            </a>
+          </div>
+
+          <a href="#designs" class="button button--middle">
+            3つのデザインを見る
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ドロワーオーバーレイ -->
+    <div
+      class="drawer-overlay drawer-overlay--in-header"
+      id="js-drawer-overlay"
+    ></div>
+
+    <a
+      href="https://shino-digital-office.com/"
+      class="portfolio-side-link"
+      aria-label="Portfolioへ戻る"
+    >
+      <span class="portfolio-side-link__text">ポートフォリオへ戻る</span>
+    </a>
+
+    <!-- main -->
+    <main class="main-layout">
+      <!-- main-hero -->
+      <div class="main-hero">
+        <div class="main-hero__bg"></div>
+
+        <!-- fv -->
+        <section id="home" class="fv design-sample-fv">
+          <div class="fv__frame">
+            <div class="fv__container">
+              <p class="fv__caption">Design Samples</p>
+              <h1>
+                小規模サイト基本プラン<br />
+                3つのデザイン比較
+              </h1>
+              <p class="fv__lead">
+                同じページ構成・同じ内容でも、デザインの方向性によって
+                サイトの印象は大きく変わります。
+              </p>
+              <a href="#designs" class="button button--large">
+                3つのデザインを見る
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- main-body -->
+      <div class="main-body">
+        <div class="main-body__bg"></div>
+
+        <!-- 本文 -->
+        <div class="main-content">
+          <!-- concept -->
+          <section class="section section--concept" id="concept">
+            <div class="bg"></div>
+            <div class="inner">
+              <p class="section__label">Concept</p>
+              <h2>同じ内容でも、印象は変えられます</h2>
+
+              <div class="section__text">
+                <p>
+                  小規模サイト基本プランは、トップ・サービス・実績・お問い合わせなど、
+                  小さな事業に必要なページ構成を想定したデモサイトです。
+                </p>
+                <p>
+                  このページでは、同じ内容をもとにした
+                  <strong>BASIC / STYLISH / SOFT</strong>
+                  の3つのデザインを見比べることができます。
+                </p>
+                <p>
+                  「きちんと信頼感を出したい」「洗練された印象にしたい」
+                  「やさしく親しみやすく見せたい」など、
+                  仕上がりイメージを考える参考としてご覧ください。
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- designs -->
+          <section class="section section--designs" id="designs">
+            <div class="bg"></div>
+            <div class="inner">
+              <p class="section__label">Designs</p>
+              <h2>3つのデザインを見る</h2>
+
+              <p class="section__lead">
+                各デザインのボタンから、見せ場となるWORKページへ移動できます。
+                デモ内では他のページにも回遊できます。
+              </p>
+
+              <div class="design-card-list">
+                <!-- BASIC -->
+                <article class="design-card design-card--basic">
+                  <div class="design-card__image">
+                    <img
+                      src="./assets/images/index/sample-basic-work.jpg"
+                      alt="BASICデザインのWORKページ"
+                    />
+                  </div>
+
+                  <div class="design-card__body">
+                    <p class="design-card__label">BASIC</p>
+                    <h3 class="design-card__title">信頼感のある標準スタイル</h3>
+                    <p class="design-card__text">
+                      清潔感・読みやすさ・分かりやすさを重視した、
+                      幅広い業種に合わせやすいデザインです。
+                    </p>
+                    <a
+                      href="./demo-basic/work.html"
+                      class="button button--middle"
+                    >
+                      BASICを見る
+                    </a>
+                  </div>
+                </article>
+
+                <!-- STYLISH -->
+                <article class="design-card design-card--stylish">
+                  <div class="design-card__image">
+                    <img
+                      src="./assets/images/index/sample-stylish-work.jpg"
+                      alt="STYLISHデザインのWORKページ"
+                    />
+                  </div>
+
+                  <div class="design-card__body">
+                    <p class="design-card__label">STYLISH</p>
+                    <h3 class="design-card__title">洗練された印象のスタイル</h3>
+                    <p class="design-card__text">
+                      余白やコントラストを活かし、すっきりとした専門性や
+                      都会的な印象を見せたい場合に向いています。
+                    </p>
+                    <a
+                      href="./demo-stylish/work.html"
+                      class="button button--middle"
+                    >
+                      STYLISHを見る
+                    </a>
+                  </div>
+                </article>
+
+                <!-- SOFT -->
+                <article class="design-card design-card--soft">
+                  <div class="design-card__image">
+                    <img
+                      src="./assets/images/index/sample-soft-work.jpg"
+                      alt="SOFTデザインのWORKページ"
+                    />
+                  </div>
+
+                  <div class="design-card__body">
+                    <p class="design-card__label">SOFT</p>
+                    <h3 class="design-card__title">
+                      やさしく親しみやすいスタイル
+                    </h3>
+                    <p class="design-card__text">
+                      やわらかい色味や丸みを活かし、相談しやすさ・親しみやすさを
+                      伝えたい場合に向いています。
+                    </p>
+                    <a
+                      href="./demo-soft/work.html"
+                      class="button button--middle"
+                    >
+                      SOFTを見る
+                    </a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- compare -->
+          <section class="section section--compare" id="compare">
+            <div class="bg"></div>
+            <div class="inner">
+              <p class="section__label">Compare</p>
+              <h2>雰囲気の違い</h2>
+
+              <p class="section__lead">
+                どのデザインが正解というよりも、事業の内容・届けたい相手・見せたい印象に合わせて
+                方向性を選んでいきます。
+              </p>
+
+              <div class="compare-list">
+                <div class="compare-item">
+                  <h3>BASIC</h3>
+                  <p class="compare-item__keyword">
+                    きちんと・信頼感・読みやすい
+                  </p>
+                  <p>
+                    士業、教室、地域サービスなど、まずは安心して内容を読んでもらいたいサイトに。
+                  </p>
+                </div>
+
+                <div class="compare-item">
+                  <h3>STYLISH</h3>
+                  <p class="compare-item__keyword">洗練・都会的・シャープ</p>
+                  <p>
+                    制作会社、クリエイター、技術系など、専門性やセンスを印象づけたいサイトに。
+                  </p>
+                </div>
+
+                <div class="compare-item">
+                  <h3>SOFT</h3>
+                  <p class="compare-item__keyword">
+                    やさしい・親しみやすい・相談しやすい
+                  </p>
+                  <p>
+                    サロン、カフェ、個人教室など、初めての方にも安心感を届けたいサイトに。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- cta -->
+          <section class="section section--cta" id="contact">
+            <div class="bg"></div>
+            <div class="inner">
+              <p class="section__label">Planning</p>
+              <h2>仕上がりイメージから一緒に考えます</h2>
+
+              <p class="section__lead">
+                どの雰囲気が合うか分からない場合も、
+                業種・お客様層・載せたい内容を整理しながら、
+                サイトの方向性を一緒に考えます。
+              </p>
+
+              <div class="cta-buttons">
+                <a href="#designs" class="button button--middle">
+                  もう一度デザインを見る
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <!-- 背景レイヤー -->
+      <div class="footer__bg"></div>
+
+      <!-- 通常フッター -->
+      <div class="site-footer__main">
+        <div class="inner inner--footer">
+          <!-- Footer navigation -->
+          <nav class="nav footer-nav flex-layout--row">
+            <div class="nav-links flex-layout--row">
+              <a href="#concept" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__icon">
+                    <svg>
+                      <use href="./assets/images/icons.svg#icon-about"></use>
+                    </svg>
+                  </span>
+                  <span class="nav-link__text">Concept</span>
+                </span>
+                <span class="nav-link__deco">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </span>
+              </a>
+
+              <a href="#designs" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__icon">
+                    <svg>
+                      <use href="./assets/images/icons.svg#icon-blog"></use>
+                    </svg>
+                  </span>
+                  <span class="nav-link__text">Designs</span>
+                </span>
+                <span class="nav-link__deco">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </span>
+              </a>
+
+              <a href="#compare" class="nav-link nav-link--link">
+                <span class="nav-link__main">
+                  <span class="nav-link__icon">
+                    <svg>
+                      <use href="./assets/images/icons.svg#icon-home"></use>
+                    </svg>
+                  </span>
+                  <span class="nav-link__text">Compare</span>
+                </span>
+                <span class="nav-link__deco">
+                  <svg>
+                    <use href="./assets/images/icons.svg#icon-arrow"></use>
+                  </svg>
+                </span>
+              </a>
+            </div>
+
+            <a href="#designs" class="button button--middle">
+              デザインを見る
+            </a>
+          </nav>
+
+          <!-- copyright -->
+          <div class="footer-meta">
+            <small class="footer-copyright"> © Shino’s Digital Office </small>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ===============================
+      トップに戻るボタン
+    =============================== -->
+    <a href="#" class="pagetop" id="js-pagetop" aria-label="ページトップへ戻る">
+      <span class="pagetop__arrow"></span>
+    </a>
+
+    <!-- java scriptでswiperを使えるようにする記述 -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- java scriptを使えるようにする記述 -->
+    <script src="./js/entry.js" type="module"></script>
+  </body>
+</html>
