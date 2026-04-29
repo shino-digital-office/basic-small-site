@@ -197,7 +197,7 @@ a:hover {
 }
 
 .inner {
-  padding: 0 24px;
+  padding: 0 20px;
   /* 最後に来たテキスト要素だけ margin-bottom を殺す */
 }
 .inner > :last-child {
@@ -205,13 +205,13 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1328px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
 
 .inner--flex {
-  padding: 0 24px;
+  padding: 0 20px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -232,7 +232,7 @@ a:hover {
 }
 @media screen and (min-width: 768px) {
   .inner--flex {
-    max-width: 1328px;
+    max-width: 1280px;
     margin: 0 auto;
   }
 }
